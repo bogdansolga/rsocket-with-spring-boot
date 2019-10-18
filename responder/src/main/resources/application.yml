@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: 'responder'
+
+  jackson:
+    serialization:
+      indent_output: true
+    default-property-inclusion: non_null
+
+  rsocket:
+    server:
+      port: 9899
+      transport: tcp
+
+logging:
+  level:
+    root: info
+    org:
+      apache: warn
+      springframework: warn
+  pattern:
+    console: '%clr([%date{HH:mm:ss.SSS}]){faint} %clr(%2p) %clr(%-40.40logger{36}){cyan} %m%n%wex'
